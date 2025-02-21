@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,11 +24,12 @@ body {
     flex-direction: column;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
+    overflow-x: hidden;
 }
 
 h1 {
-    font-size: 2.5rem;
-    animation: glow 1.5s infinite alternate;
+    font-size: 60px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -52,6 +62,8 @@ input {
 }
 
 h2 {
+    font-size: 40px;
+    color: chartreuse;
     margin-bottom: 15px;
 }
 
@@ -135,7 +147,143 @@ a:hover {
     to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes glow {
+/* Removed the glow animation */
+/* @keyframes glow {
     from { text-shadow: 0 0 10px yellow; }
     to { text-shadow: 0 0 20px yellow; }
+} */
+
+/* Additional styles to match the second code */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    padding-left: 30px;
+    border-bottom: 1px solid wheat;
+}
+
+.navbar a {
+    color: yellow;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 50dvh;
+    background-image: url("/hero-image.jpeg");
+    background-color: rgba(0, 0, 0, 0.789);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    text-align: center;
+    padding: 0 20px;
+    color: chartreuse;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: chartreuse;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.services a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 25px;
+    background: black;
+    border: 1px solid rgba(255, 255, 0, 0.57);
+    color: yellow;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.services a:hover {
+    transform: scale(1.1);
+    background: yellow;
+    color: black;
+}
+
+.faqs p, .contact p {
+    font-size: 18px;
+}
+
+footer {
+    background: black;
+    color: yellow;
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#about {
+    height: 50dvh;
+    width: 70dvw;
+    margin: 30px;
+}
+
+#about-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0px;
+}
+
+#about h2 {
+    font-size: 60px;
+    color: chartreuse;
+    text-align: start;
+}
+
+#about p {
+    color: white;
+    font-size: 30px;
+    text-align: start;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100dvw;
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    height: fit-content;
 }
