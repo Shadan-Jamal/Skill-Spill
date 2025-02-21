@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner - SkillSpill</title>
+    <link rel="stylesheet" href="learner_css.css">
+</head>
+<body>
+    <h1>Welcome, Learner!</h1>
+    
+    <!-- Name Input Field -->
+    <input type="text" id="nameInput" placeholder="Enter Your Name" required>
+
+    <p>Select your preferred skills:</p>
+    <div class="container">
+        <!-- Academic Skills -->
+        <div class="box">
+            <h2>Which skills would you like to spill? (Academic)</h2>
+            <div class="buttons" id="academicSkills">
+                <button>Coding</button>
+                <button>Marketing</button>
+                <button>Psychology</button>
+                <button>Current Affairs</button>
+                <button>Basic Mathematics</button>
+                <button>Competitive Examination</button>
+            </div>
+        </div>
+
+        <!-- Non-Academic Skills -->
+        <div class="box">
+            <h2>Which skills would you like to spill? (Non-Academic)</h2>
+            <div class="buttons" id="nonAcademicSkills">
+                <button>Music (Vocals)</button>
+                <button>Communication Skills</button>
+                <button>Art</button>
+                <button>Social Media Knowledge</button>
+                <button>Photography</button>
+                <button>Event Hosting</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Selection Display -->
+    <div id="finalSelection">
+        <h2>Selected Skills:</h2>
+        <p id="selectedSkills">None</p>
+        <button id="submit">Submit</button>
+    </div>
+
+    <a href="index.html">Back to Home</a>
+
+    <script src="learner_js.js"></script>
+</body>
+</html>

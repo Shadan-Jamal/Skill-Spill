@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: yellow;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    animation: glow 1.5s infinite alternate;
+    margin-bottom: 20px;
+}
+
+.tutor-section {
+    margin-top: 30px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.google-form {
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+    padding: 15px;
+    border: 2px solid yellow;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.google-form:hover {
+    background-color: yellow;
+    color: black;
+    transform: scale(1.1);
+}
+
+a {
+    color: yellow;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px yellow; }
+    to { text-shadow: 0 0 20px yellow; }
+}
