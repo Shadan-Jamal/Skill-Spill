@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 .main-font{
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.para-font{
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -13,28 +24,34 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
+    background-color:black;
     overflow-x: hidden;
 }
-header {
-    background: black;
+nav h1 {
     color: yellow;
-    text-align: center;
-    padding: 20px;
-    font-size: 28px;
+    text-align: start;
+    /* padding: 20px; */
+    font-size: 20px;
     font-weight: bold;
     animation: fadeIn 1.5s ease-in-out;
 }
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     display: flex;
-    justify-content: center;
-    background: black;
-    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    padding-left: 30px;
+    border-bottom: 1px solid wheat;
 }
 .navbar a {
     color: yellow;
     text-decoration: none;
     padding: 15px 20px;
-    font-size: 18px;
+    font-size: 14   px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -42,10 +59,16 @@ header {
     color: white;
 }
 .hero {
+    min-height: 50dvh;
+    background-image: url("/hero-image.jpeg");
+    background-color: rgba(0, 0, 0, 0.789);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
     text-align: center;
-    padding: 80px 20px;
-    background: yellow;
-    color: black;
+    padding: 0 20px;
+    color: chartreuse;
     position: relative;
     overflow: hidden;
     animation: slideIn 1.5s ease-in-out;
@@ -63,14 +86,22 @@ header {
     padding: 60px 20px;
     text-align: center;
 }
+
+.services h2{
+    color: chartreuse;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
 .services a {
     display: inline-block;
     margin: 20px;
-    padding: 15px 30px;
+    padding: 10px 25px;
     background: black;
+    border:1px solid rgba(255, 255, 0, 0.57);
     color: yellow;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     border-radius: 10px;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -82,6 +113,7 @@ header {
 }
 .faqs p, .contact p {
     font-size: 18px;
+
 }
 footer {
     background: black;
@@ -98,4 +130,41 @@ footer {
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+#about{
+    height:50dvh;
+    width: 70dvw;
+    margin: 30px;
+}
+
+#about-box{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: start;
+    gap: 0px;
+}
+
+#about h2{
+    font-size: 60px;
+    color: chartreuse;
+    text-align: start;
+}
+
+#about p{
+    color: white;
+    font-size: 30px;
+    text-align: start;
+}
+
+.services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100dvw;
+    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    height: fit-content;
 }
