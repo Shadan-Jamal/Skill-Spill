@@ -27,6 +27,14 @@
             <h2 class="main-font">About Us</h2>
             <p class="para-font">SkillSpill is a dynamic student-to-student community that connects college students from different institutions to exchange ideas, collaborate, and teach each other valuable skills. Whether you want to learn something new, share your expertise, or network with like-minded peers, this platform provides a space for mutual growth and knowledge-sharing. Join us in building a supportive learning ecosystem where students empower each other.</p>
         </div>
+        <div class="mis-vis para-font">
+            <p><strong>Vision:</strong> <br>
+                SKILLSPILL aims to become a leading student-driven skill-sharing platform, revolutionizing the way young minds exchange knowledge. SKILLSPILL envisions a future where students worldwide can upskill affordably, foster a culture of continuous learning, and shape their careers through the power of community.</p>
+                
+            <p><strong>Mission:</strong> <br>
+                Empowering students to learn, share, and grow through a dynamic peer-to-peer skill exchange community. SKILLSPILL fosters collaboration, enabling students to acquire real-world skills, build meaningful connections, and unlock new opportunities—all within an accessible and engaging ecosystem.
+            </p>
+        </div>
     </section>
     
     <section class="section services">
@@ -38,17 +46,84 @@
     </section>
     
     <section class="section faqs" id="faqs">
-        <h2>FAQs</h2>
-        <p>Have questions? We have answers! Contact us to learn more.</p>
+        <h2 class="main-font">FAQs</h2>
+        <div class="faq-item para-font" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+                Who can join SKILLSPILL?
+            </div>
+            <div class="faq-answer">
+                Any student who is eager to learn, share skills, and connect with like-minded peers is welcome to join.
+            </div>
+        </div>
+        <div class="faq-item para-font" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+                What is SKILLSPILL?
+            </div>
+            <div class="faq-answer">
+                SKILLSPILL is a student-driven community where members exchange valuable skills with each other. Whether it's coding, photography, graphic design, public speaking, or any other skill, you can learn and teach in a collaborative environment. IT COMPLETELY INCLUDES ACADEMICS AND NON-ACADEMICS.
+            </div>
+        </div>
+        <div class="faq-item para-font" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+                How does the skill exchange work?
+            </div>
+            <div class="faq-answer">
+                You can list the skills you're offering and the skills you want to learn. Members can then connect with each other and arrange one-on-one or group learning sessions.
+            </div>
+        </div>
+        <div class="faq-item para-font" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+                What kind of skills can be exchanged?
+            </div>
+            <div class="faq-answer">
+                Anything of value! This includes academic skills (math, writing, languages), creative skills (music, art, video editing), and professional skills (resume building, networking, coding).
+            </div>
+        </div>
+        <div class="faq-item para-font" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+                What if I don’t have a skill to offer? Can I still join?
+            </div>
+            <div class="faq-answer">
+                Absolutely! Everyone has something to offer, even if you don’t realize it yet. Plus, as you learn from others, you’ll gain skills that you can later share with the community.
+            </div>
+        </div>
     </section>
     
     <section class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: support@skillspill.com</p>
+        <h2 class="main-font">Contact Us</h2>
+        <div class="contact-items">
+            <div class="contact-item" onclick="redirectTo('https://wa.me/917022857385')">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">
+            </div>
+            <div class="contact-item" onclick="redirectTo('https://mail.google.com/mail/?view=cm&fs=1&to=skillspill6@gmail.com')">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+            </div>
+            <div class="contact-item" onclick="redirectTo('https://www.instagram.com/skillspilll?igsh=MWtzNDFreTB1dnprcg%3D%3D&utm_source=qr')">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </div>
+        </div>
     </section>
     
     <footer>
         &copy; 2025 SkillSpill. All rights reserved.
     </footer>
+
+    <script>
+        function redirectTo(url) {
+            window.open(url, '_blank');
+        }
+        function toggleFAQ(clickedCard) {
+            // Close all other expanded cards
+            const allCards = document.querySelectorAll('.faq-item');
+            allCards.forEach(card => {
+                if (card !== clickedCard && card.classList.contains('expanded')) {
+                    card.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the clicked card
+            clickedCard.classList.toggle('expanded');
+        }
+    </script>
 </body>
 </html>
