@@ -134,8 +134,16 @@ footer {
 
 #about{
     height:max-content;
-    width: 70dvw;
+    width: 90dvw;
     margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt{
+    width: 50%;
 }
 
 #about-box{
@@ -172,9 +180,9 @@ footer {
 .mis-vis{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 80dvw;
+    width: 95dvw;
     gap: 20px;
 }
 
@@ -282,4 +290,15 @@ strong{
     width: 95dvw;
     border-top: 1px solid whitesmoke;
     border-bottom: 1px solid whitesmoke;
+}
+
+video{
+    width: 700px;
+    height: 300px;
+}
+
+.vid{
+    width: 50%;
+    height: 90%;
+    border-radius: 30px;
 }
